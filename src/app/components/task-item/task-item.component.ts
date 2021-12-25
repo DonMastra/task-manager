@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Task } from '../../Task';
+import { TASKS } from '../../mock-tasks';
 
 @Component({
   selector: 'app-task-item',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
+
+  @Input()
+  task: Task = TASKS[0];
 
   constructor() { }
 
